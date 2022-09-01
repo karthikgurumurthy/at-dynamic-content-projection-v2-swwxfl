@@ -1,0 +1,10 @@
+<button
+  *ngFor="let tab of tabs; index as i"
+  (click)="currentTab = tab.template"
+>
+  {{ tab.name }}
+</button>
+
+<div class="tab-container">
+  <ng-container [ngTemplateOutlet]="currentTab"></ng-container>
+</div>
